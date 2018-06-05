@@ -30,7 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  basetitle: " | Ruby on Rails Tutorial Sample App"
+  login_link: "Log in"
+  titlecontent: "Ruby on Rails Tutorial Sample App"
   static_pages:
     home:
       title: "Home"
