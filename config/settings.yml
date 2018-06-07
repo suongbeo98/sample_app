@@ -2,3 +2,5 @@ user:
   email_max: 255
   pass_min: 6
   name_max: 50
+gravatar:
+  size: 80
