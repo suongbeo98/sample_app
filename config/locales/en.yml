@@ -28,16 +28,33 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   login_link: "Log in"
   titlecontent: "Ruby on Rails Tutorial Sample App"
+  users:
+    content1: "Users#new"
+    content2: "Find me in app/views/users/new.html.erb"
+  layouts:
+    header:
+      link1: "Home"
+      link2: "Help"
+      link3: "Log in"
+    footer:
+      content1: "The"
+      link1: "Ruby on Rails Tutorial"
+      content2: "by"
+      link2: "Michael Hartl"
+      link3: "About"
+      link4: "Contact"
+      link5: "News"
   static_pages:
     home:
-      title: "Home"
+      header1: "Welcome to the Sample App"
       content1: "This is the home page for the"
       link1: "Ruby on Rails Tutorial"
       content2: "sample application."
+      button1: "Sign up now!"
+      img_alt1: "Rails logo"
     help:
       title: "Help"
       content1: "Get help on the Ruby on Rails Tutorial at the"
