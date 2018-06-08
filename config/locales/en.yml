@@ -31,11 +31,23 @@
 en:
   login_link: "Log in"
   titlecontent: "Ruby on Rails Tutorial Sample App"
+  shared:
+    error_messages:
+      content1: "The form contains"
+      content2: "error"
   users:
-    content1: "Users#new"
-    content2: "Find me in app/views/users/new.html.erb"
+    create:
+      flash_success: "Welcome to the Sample App!"
+    new:
+      title: "Sign up"
+      submit: "Create my account"
+      lb_name: "Name"
+      lb_email: "Email"
+      lb_pass: "Password"
+      lb_pass_confirm: "Confirmation"
   layouts:
     header:
+      logo: "sample app"
       link1: "Home"
       link2: "Help"
       link3: "Log in"
