@@ -35,6 +35,16 @@ en:
     error_messages:
       content1: "The form contains"
       content2: "error"
+  sessions:
+    new:
+      header: "Log in"
+      lb_email: "Email"
+      lb_password: "Password"
+      submit_btn: "Log in"
+      content1: "New user?"
+      link1: "Sign up now!"
+    create:
+      flash_danger: "Invalid email/password combination"
   users:
     create:
       flash_success: "Welcome to the Sample App!"
@@ -45,12 +55,19 @@ en:
       lb_email: "Email"
       lb_pass: "Password"
       lb_pass_confirm: "Confirmation"
+    show:
+      flash_warning: "User not found!"
   layouts:
     header:
       logo: "sample app"
-      link1: "Home"
-      link2: "Help"
-      link3: "Log in"
+      link_home: "Home"
+      link_help: "Help"
+      link_users: "Users"
+      drop_account: "Account"
+      link_profile: "Profile"
+      link_settings: "Setting"
+      link_logout: "Log out"
+      link_login: "Log in"
     footer:
       content1: "The"
       link1: "Ruby on Rails Tutorial"
