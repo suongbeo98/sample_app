@@ -40,6 +40,7 @@ en:
       header: "Log in"
       lb_email: "Email"
       lb_password: "Password"
+      lb_checkbox: "Remember me on this computer"
       submit_btn: "Log in"
       content1: "New user?"
       link1: "Sign up now!"
