@@ -47,17 +47,37 @@ en:
     create:
       flash_danger: "Invalid email/password combination"
   users:
+    index:
+      title: "All users"
+    user:
+      confirm_delete: "You sure?"
+      link_delete: "delete"
     create:
       flash_success: "Welcome to the Sample App!"
     new:
       title: "Sign up"
       submit: "Create my account"
+    edit:
+      title: "Edit user"
+      link_gravatar: "change"
+      header: "Update your profile"
+      submit: "Save changes"
+    update:
+      flash_success: "Profile updated"
+    destroy:
+      flash_success: "User deleted"
+      flash_danger: "Can't delete user"
+    logged_in_user:
+      flash_danger: "Please log in."
+    show:
+      flash_warning: "User not found!"
+    form:
       lb_name: "Name"
       lb_email: "Email"
       lb_pass: "Password"
       lb_pass_confirm: "Confirmation"
-    show:
-      flash_warning: "User not found!"
+    load_user:
+      flash_danger: "User not found!"
   layouts:
     header:
       logo: "sample app"
