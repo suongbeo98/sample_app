@@ -1,6 +1,14 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, except: %i(new show create)
+  before_action :correct_user, only: %i(edit update)
+  before_action :admin_user, only: :destroy
+  before_action :load_user, except: %i(index new create)
+
+  def index
+    @users = User.paginate page: params[:page]
+  end
+
   def show
-    @user = User.find_by id: params[:id]
     return if @user
     flash[:warning] = t ".flash_warning"
     redirect_to signup_path
@@ -21,7 +29,33 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def edit; end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t ".flash_success"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @user.destroy
+      flash[:success] = t ".flash_success"
+    else
+      flash[:danger] =  t ".flash_danger"
+    end
+    redirect_to users_url
+  end
+
   private
+
+  def load_user
+    return if (@user = User.find_by id: params[:id])
+    flash[:danger] = t ".flash_danger"
+    redirect_to root_url
+  end
 
   def user_params
     params.require(:user).permit :name, :email, :password, :password_confirmation

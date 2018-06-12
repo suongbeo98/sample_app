@@ -1,0 +1,7 @@
+<li>
+  <%= gravatar_for user, size: Settings.gravatar.user_index_size %>
+  <%= link_to user.name, user %>
+  <% if delete_priviledge? user %>
+    | <%= link_to t(".link_delete"), user, method: :delete, data: { confirm: t(".confirm_delete") } %>
+  <% end %>
+</li>

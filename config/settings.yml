@@ -4,3 +4,4 @@ user:
   name_max: 50
 gravatar:
   size: 80
+  users_index_size: 50
