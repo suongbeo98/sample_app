@@ -46,6 +46,21 @@ en:
       link1: "Sign up now!"
     create:
       flash_danger: "Invalid email/password combination"
+      msg_content: "Account not activated. Check your email for the activation link."
+  user_mailer:
+    account_activation:
+      header: "Sample App"
+      subject_content: "Account activation"
+      greeting: "Hi %{username}"
+      content1: "Welcome to the Sample App! Click on the link below to activate your"
+      content2: "account:"
+      active_link: "Activate"
+    password_reset:
+      greeting: "Hi"
+  account_activations:
+    edit:
+      flash_success: "Account activated!"
+      flash_danger: "Invalid activation link"
   users:
     index:
       title: "All users"
@@ -53,7 +68,7 @@ en:
       confirm_delete: "You sure?"
       link_delete: "delete"
     create:
-      flash_success: "Welcome to the Sample App!"
+      flash_info: "Please check your email to activate your account."
     new:
       title: "Sign up"
       submit: "Create my account"
