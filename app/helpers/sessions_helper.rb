@@ -18,7 +18,7 @@ module SessionsHelper
       @current_user ||= User.find_by(id: user_id)
     elsif (user_id = cookies.signed[:user_id])
       user = User.find_by id: user_id
-      if user && user.authenticated?(cookies[:remember_token])
+      if user && user.authenticated?(:remember, cookies[:remember_token])
         log_in user
         @current_user = user
       end
@@ -48,5 +48,17 @@ module SessionsHelper
 
   def store_location
     session[:forwarding_url] = request.original_url if request.get?
+  end
+
+  def activated_check?
+    if user.activated?
+      log_in user
+      session_hash[:remember_me] == Settings.remembered ? remember(user) : forget(user)
+      redirect_back_or user
+    else
+      message = t ".msg_content"
+      flash[:warning] = message
+      redirect_to root_url
+    end
   end
 end
