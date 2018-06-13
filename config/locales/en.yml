@@ -1,10 +1,29 @@
 en:
+  micropost_upload_alert: "Maximum file size is 5MB. Please choose a smaller file."
   login_link: "Log in"
   titlecontent: "Ruby on Rails Tutorial Sample App"
+  upload_size_error: "should be less than 5MB"
   shared:
     error_messages:
       content1: "The form contains"
       content2: "error"
+    user_info:
+      link_profile: "view my profile"
+      count_microposts: "micropost"
+    micropost_form:
+      text_placeholder: "Compose new micropost..."
+      submit: "Post"
+  microposts:
+    create:
+      flash_success: "Micropost created"
+    destroy:
+      flash_success: "Micropost deleted"
+      flash_danger: "Deleting error"
+    micropost:
+      content1: "Posted"
+      content2: "ago."
+      link_delete: "delete"
+      delete_confirm: "You sure?"
   sessions:
     new:
       header: "Log in"
@@ -83,6 +102,7 @@ en:
     logged_in_user:
       flash_danger: "Please log in."
     show:
+      content1: "Microposts (%{size}})"
       flash_warning: "User not found!"
     form:
       lb_name: "Name"
@@ -113,6 +133,7 @@ en:
   static_pages:
     home:
       header1: "Welcome to the Sample App"
+      header3: "Micropost Feed"
       content1: "This is the home page for the"
       link1: "Ruby on Rails Tutorial"
       content2: "sample application."

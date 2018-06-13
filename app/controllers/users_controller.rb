@@ -9,9 +9,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    return if @user
-    flash[:warning] = t ".flash_warning"
-    redirect_to signup_path
+    @microposts = @user.microposts.paginate page: params[:page]
   end
 
   def create

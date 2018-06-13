@@ -7,3 +7,7 @@ gravatar:
   users_index_size: 50
 remembered: 1
 password_expiration: 2
+micropost:
+  content_min: 170
+upload_picture_size: 5
+picture_accept: "image/jpeg,image/gif,image/png"

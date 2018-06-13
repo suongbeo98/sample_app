@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   attr_accessor :remember_token, :activation_token, :reset_token
+  has_many :microposts, dependent: :destroy
   validates :email, presence: true
   validates :email, length: {maximum: Settings.user.email_max}
   validates :email, format: {with: VALID_EMAIL_REGEX}
@@ -57,6 +58,10 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < Settings.password_expiration.hours.ago
+  end
+
+  def feed
+    Micropost.newest id
   end
 
   private
