@@ -6,3 +6,4 @@ gravatar:
   size: 80
   users_index_size: 50
 remembered: 1
+password_expiration: 2

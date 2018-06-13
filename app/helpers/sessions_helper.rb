@@ -51,10 +51,10 @@ module SessionsHelper
   end
 
   def activated_check?
-    if user.activated?
-      log_in user
-      session_hash[:remember_me] == Settings.remembered ? remember(user) : forget(user)
-      redirect_back_or user
+    if @user.activated?
+      log_in @user
+      params[:session][:remember_me] == Settings.remembered ? remember(@user) : forget(@user)
+      redirect_back_or @user
     else
       message = t ".msg_content"
       flash[:warning] = message
