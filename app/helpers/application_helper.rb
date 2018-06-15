@@ -7,4 +7,8 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
+
+  def init_user
+    @user ||= current_user
+  end
 end

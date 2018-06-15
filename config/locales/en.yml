@@ -13,6 +13,9 @@ en:
     micropost_form:
       text_placeholder: "Compose new micropost..."
       submit: "Post"
+    stats:
+      content1: "following"
+      content2: "followers"
   microposts:
     create:
       flash_success: "Micropost created"
@@ -24,6 +27,11 @@ en:
       content2: "ago."
       link_delete: "delete"
       delete_confirm: "You sure?"
+  relationships:
+    create:
+      flash_danger: "User not found"
+    destroy:
+      flash_danger: "User not found"
   sessions:
     new:
       header: "Log in"
@@ -102,8 +110,15 @@ en:
     logged_in_user:
       flash_danger: "Please log in."
     show:
-      content1: "Microposts (%{size}})"
+      content1: "Microposts (%{size})"
       flash_warning: "User not found!"
+    following:
+      title: "Following"
+    followers:
+      title: "Followers"
+    show_follow:
+      link_profile: "view my profile"
+      content1: "Microposts:"
     form:
       lb_name: "Name"
       lb_email: "Email"
@@ -111,6 +126,8 @@ en:
       lb_pass_confirm: "Confirmation"
     load_user:
       flash_danger: "User not found!"
+    follow:
+      submit: "Follow"
   layouts:
     header:
       logo: "sample app"

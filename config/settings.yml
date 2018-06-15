@@ -5,6 +5,7 @@ user:
 gravatar:
   size: 80
   users_index_size: 50
+  follow: 30
 remembered: 1
 password_expiration: 2
 micropost:
